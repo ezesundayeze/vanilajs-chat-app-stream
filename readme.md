@@ -43,14 +43,21 @@ Install StreamChat
 
 ```shell
 # using npm
-npm install stream-chat browserify axios javascript-time-ago
+npm install stream-chat axios javascript-time-ago
 
 # using yarn
-yarn add stream-chat browserify axios javascript-time-ago
+yarn add stream-chat axios javascript-time-ago
  
 ```
 
+If you make any change to the javascript files you should use browserify to bundle it.
+
+Browerify is a dev dependency we are using it to bundle our node packages --- stream, Axios, timeago to be used on the frontend.
+
 ```shell 
+
+npm install browserify
+
 browserify main.js -o bundle.js
 
 browserify ./src/Login/index.js -o login.bundle.js

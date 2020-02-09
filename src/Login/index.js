@@ -7,14 +7,10 @@ const lastname = document.getElementById("lastname")
 const firstname = document.getElementById("firstname")
 const submit = document.getElementById("submit")
 
-
-
-
 submit.addEventListener("submit", (e)=>{
     e.preventDefault()
     initStream(e)
 })
-
 
 const initStream = async (e) =>{
 
@@ -29,12 +25,12 @@ const initStream = async (e) =>{
         email: email.value
   
       }).then((response)=>{
-  
+
         localStorage.setItem("user", JSON.stringify(response.data.user));
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("apiKey", response.data.apiKey);    
         window.location.href = "/public/index.html"
-  
+
       }).catch((err)=>{
         // setLoading(false);
         // setErrorMessage("Your registration wasn't successful, please, try again.")
