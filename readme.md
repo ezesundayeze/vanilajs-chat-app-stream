@@ -4,7 +4,6 @@
 
 This chat application should you all set up with a chat application with Stream and Vanilajs
 
-> Note: This API does not contain auth, therefore it is not escure _at this time_. I'll be adding an auth layer shortly but until then, you can easily add your own with a JWT token.
 
 ## Quick Instructions (localhost)
 
