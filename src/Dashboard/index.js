@@ -7,13 +7,15 @@ const { BubbleTemplate } = config
 const messsageText = document.getElementById('message-input')
 const info = document.getElementById('info')
 
-const { name, _id  } = JSON.parse(localStorage.getItem('user'))
+
 
 const token = localStorage.getItem('token')
 const apiKey =  localStorage.getItem('apiKey')
-const id = _id
 
 if (token){
+
+    const { name, _id  } = JSON.parse(localStorage.getItem('user'))
+    const id = _id
     const client = new StreamChat(apiKey);
 
     //initialize user
@@ -107,7 +109,7 @@ if (token){
     }
 
 }else{
-    window.location.href="/login.html"
+    window.location.href="/public/login.html"
 }
 
 
