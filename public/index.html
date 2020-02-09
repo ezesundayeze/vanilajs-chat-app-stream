@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/stream-chat"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/stream-chat"></script> -->
 
     <link src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></link>
     <link rel="stylesheet" href="./static/style.css">
-    <title>Stream Chat App</title>
+    <title>Stream Chat App </title>
 </head>
 <body>
     <section class="msger">
         <header class="msger-header">
           <div class="msger-header-title">
             <i class="fas fa-comment-alt"></i> Stream Chat App
+            <p id="count"></p>
           </div>
           <div class="msger-header-options">
             <span><i class="fas fa-cog"></i></span>
@@ -22,49 +23,22 @@
         </header>
       
         <main class="msger-chat">
-          <div class="msg left-msg">
-            <div
-             class="msg-img"
-             style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
-            ></div>
-      
-            <div class="msg-bubble">
-              <div class="msg-info">
-                <div class="msg-info-name"> BOT </div>
-                <div class="msg-info-time">12:45</div>
-              </div>
-      
-              <div class="msg-text">
-                Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
-              </div>
-            </div>
-          </div>
-      
-          <div class="msg right-msg">
-            <div
-             class="msg-img"
-             style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"
-            ></div>
-      
-            <div class="msg-bubble">
-              <div class="msg-info">
-                <div class="msg-info-name">Sajad</div>
-                <div class="msg-info-time">12:46</div>
-              </div>
-      
-              <div class="msg-text">
-                You can change your name in JS section!
-              </div>
-            </div>
-          </div>
+          <p id="loading">Loading...</p>
+            <ul id="left-msg"></ul>
+            <ul id="right-msg"></ul>
         </main>
       
-        <form class="msger-inputarea">
-          <input type="text" class="msger-input" placeholder="Enter your message...">
-          <button type="submit" class="msger-send-btn">Send</button>
-        </form>
+        <div class="msger-inputarea">
+          <input type="text" class="msger-input" id="message-input" placeholder="Enter your message...">
+        </div>
+        <p id="info"></p>
       </section>
-<script src="../node_modules/stream-chat/index.js"></script>
-<script src="../src/Dashboard/index.js"></script>
+
+      <script src="./../bundle.js" type="module">
+      </script>
+
+</script>
 </body>
 </html>
+
+
