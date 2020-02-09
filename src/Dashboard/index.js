@@ -107,7 +107,7 @@ if (token){
     }
 
 }else{
-    window.location.href="/public/login.html"
+    window.location.href="/login.html"
 }
 
 
