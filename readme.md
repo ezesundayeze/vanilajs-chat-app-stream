@@ -65,3 +65,5 @@ browserify ./src/Login/index.js -o login.bundle.js
 
 You can now run the `index.html` file in your public directory with any [live server](https://www.npmjs.com/package/live-server) or anything else.
 
+The APP preview can be found here [vanila-stream-chat](https://vanila-stream-chat.netlify.com/public/login)
+
