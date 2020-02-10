@@ -11,7 +11,6 @@ const info = document.getElementById('info')
 
 const token = localStorage.getItem('token')
 const apiKey =  localStorage.getItem('apiKey')
-console.log()
 if (token){
 
     const { name, _id } = JSON.parse(localStorage.getItem('user'))
