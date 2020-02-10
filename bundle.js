@@ -45401,10 +45401,10 @@ const info = document.getElementById('info')
 
 const token = localStorage.getItem('token')
 const apiKey =  localStorage.getItem('apiKey')
-
+console.log()
 if (token){
 
-    const { name, _id  } = JSON.parse(localStorage.getItem('user'))
+    const { name, _id } = JSON.parse(localStorage.getItem('user'))
     const id = _id
     const client = new StreamChat(apiKey);
 
@@ -45437,11 +45437,17 @@ if (token){
     messsageText.addEventListener("keypress", (e)=>{
         checkTyping(e)
         if ( e.keyCode==13 ){
-            //check for internet connection before sending message
-            channel.sendMessage({
-                text: e.target.value
-            })
-            e.target.value = ""
+            // clean message input
+            const text = e.target.value.replace(/</g, "&lt;").replace(/>/g, "&gt;").trim();
+            if (text === "") {
+                return -1; //empty messages cannot be sent
+            }else{
+                channel.sendMessage({
+                    text: e.target.value
+                })
+                e.target.value = ""
+            }
+
         }
     })
 
